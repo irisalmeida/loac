@@ -1,0 +1,10 @@
+main:
+	addi x10, x0, 2
+	addi x11, x0, 4
+loop:
+	beq x10, x11, end
+	add x10, x10, x10
+	j loop 
+end:
+	add x12, x11, x11
+	addi x0, x0, 0
