@@ -1,0 +1,7 @@
+.text
+comeco:
+	lui a0, 0x10000         	# Carrega os 16 bits mais significativos do endereço em a0
+	addi a0, a0, 0x00C        	# Adiciona os 12 bits menos significativos do endereço em a0
+	li a1, 0xFE             	# Carrega o valor imediato 0xFE em a1
+	sb a1, 0(a0)            	# Armazena o valor contido em a1 no endereço de memória especificado em a0
+	lb a2, 0(a0)           	        # Carrega o byte do endereço de memória especificado em a2
